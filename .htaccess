@@ -1,0 +1,5 @@
+DirectoryIndex index.php
+Options +Indexes
+
+#php директивы
+#php_flag asp_tags on
