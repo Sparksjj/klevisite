@@ -1,40 +1,11 @@
 <?php
 require_once 'controllers/variables.php';
 require_once 'controllers/function.php';
+require_once 'controllers/seo.php';
+
+require_once 'views/layouts/_head.php';
+require_once 'views/layouts/_navigation.php';
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Starter Template for Bootstrap</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-            <?php
-                menu($menu);
-            ?>
-        </div><!--/.nav-collapse -->
-    </div>
-</nav>
-
 <div class="container">
 
     <div class="starter-template">
@@ -43,18 +14,16 @@ require_once 'controllers/function.php';
             <div class="col-md-4"><?php menu($menu2, true); ?></div>
             <div class="col-md-8">
 
-                <?php include 'views/'.$id.".php" ?>
+                <?php include 'views/staticpages/_table.php' ?>
 
             </div>
         </div>
     </div>
-    <div class="mastfoot">
-        <div class="inner">
-            <p>
-                <a href="#">Copyright <?php echo $year ?></a>
-            </p>
-        </div>
-    </div>
+
+<?php 
+require_once 'views/layouts/_footer.php';
+?>
+
 </div><!-- /.container -->
 
 </body>
